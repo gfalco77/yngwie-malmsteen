@@ -1,6 +1,6 @@
 package com.phoenix.stockproducer.services;
 
-import com.phoenix.stockproducer.schema.ProductStock;
+import com.phoenix.schema.stock.ProductStock;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -19,6 +19,7 @@ public class StockProducerService {
     private String stockTopic;
 
     public void sendStockUpdate(ProductStock productStock) {
+        // Add CompletableFuture maybe
         kafkaTemplate.send(stockTopic, productStock);
     }
 

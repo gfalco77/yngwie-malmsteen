@@ -1,6 +1,6 @@
 package com.phoenix.stockproducer.controllers;
 
-import com.phoenix.stockproducer.schema.ProductStock;
+import com.phoenix.schema.stock.ProductStock;
 import com.phoenix.stockproducer.services.StockProducerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
